@@ -1,10 +1,10 @@
 import UserCard from './UserCard';
-import { USERS } from "../users.js";
 
-export default function UserList(){
+export default function UserList({users}){
     return(
         <div>
-            {USERS.map((u,i) => <UserCard key={i} {...u}/>)}
+            <h2>User list</h2>
+            {users.map((u,i) => <UserCard key={i} {...u}/>)}
         </div>
     );
 }
