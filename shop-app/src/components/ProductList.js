@@ -40,7 +40,7 @@ export default function ProductList(){
             <ol>
                 {products.map((item, ind) => <li key={ind}>{item.brand} {item.title} {item.price}</li>)}
             </ol>
-            <button onClick={loadProducts}>Load</button>
+            <button onClick={loadProducts}>Load more...</button>
         </>
     );
 }

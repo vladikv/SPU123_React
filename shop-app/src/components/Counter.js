@@ -1,24 +1,16 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { USERS } from "../users";
+import { CounterContext } from "../contexts/counter.context";
 
 export default function Counter(){
 
-    const [count, setCount] = useState(USERS.length);
-
-    const plus =()=>{
-        setCount(count+1);
-    } 
-
-    const minus =()=>{
-        setCount(count-1);
-
-    } 
+    const {count,increment,decrement} = useContext(CounterContext);
 
     return(
         <>
             <h2>Counter: {count}</h2>
-            <button onClick={plus} >+</button>
-            <button onClick={minus} >-</button>
+            <button onClick={increment} >+</button>
+            <button onClick={decrement} >-</button>
         </>
 
     );
